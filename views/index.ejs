@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Todo List</title>
+  <link rel="shortcut icon" href="favicon.ico">
+  <link rel="stylesheet" href="font-awesome.min.css">
+  <!-- <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.1.0/css/all.css" integrity="sha384-lKuwvrZot6UHsBSfcMvOkWwlCMgc0TaWr+30HWe3a4ltaBwTZhyTEggF5tJv8tbt" crossorigin="anonymous"> -->
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<section id="container1">
+  <section class="eye">
+    <h1>To Do List</h1>
+    <h2>Add a Task</h2>
+      <h3>Tasks</h3>
+  </section>
+    <ul class="messages">
+      <% for(var i=0; i<messages.length; i++) {%>
+        <li class="message">
+          <span><%= messages[i].msg %></span>
+          <span><%= messages[i].edit %></span>
+          <span><i class="fas fa-edit" aria-hidden="true"></i></span>
+          <span><i class="fa fa-trash" aria-hidden="true"></i></span>
+        </li>
+        <% } %>
+      </ul>
+
+
+      <form action="/messages" method="POST">
+        <input type="text" placeholder="message" name="msg" id="msg">
+        <button type="submit">Submit</button>
+      </form>
+
+</section>
+
+  <script src="main.js"></script>
+
+</body>
+</html>

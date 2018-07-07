@@ -1,0 +1,147 @@
+/******************************************
+/* SETUP
+/*******************************************/
+
+/* Box Model Hack */
+* {
+     -moz-box-sizing: border-box; /* Firexfox */
+     -webkit-box-sizing: border-box; /* Safari/Chrome/iOS/Android */
+     box-sizing: border-box; /* IE */
+}
+/******************************************
+/* BASE STYLES
+/*******************************************/
+
+body {
+  color: #000;
+  font-size: 10px;
+  line-height: 1.4;
+  font-family: Helvetica, Arial, sans-serif;
+}
+
+li{
+  background-image: url('https://vignette.wikia.nocookie.net/epicrapbattlesofhistory/images/3/3b/Green_Grid_Background.png/revision/latest?cb=20141221224239');
+  font-size: 18px;
+}
+
+
+
+/* Clear fix hack */
+.clearfix:after {
+   content: ".";
+   display: block;
+   clear: both;
+   visibility: hidden;
+   line-height: 0;
+   height: 0;
+}
+
+.clear {
+	clear: both;
+}
+
+.alignright {
+	float: right;
+	padding: 0 0 10px 10px; /* note the padding around a right floated image */
+}
+
+.alignleft {
+	float: left;
+	padding: 0 10px 10px 0; /* note the padding around a left floated image */
+}
+
+
+.complete {
+  text-decoration: line-through;
+}
+
+#edit{
+  display: none;
+}
+
+#container1{
+  width: 20%;
+  margin: 0 auto;
+  background-color: #23A2FF;
+  color: white;
+  border-radius: 10px;
+  text-align: center;
+
+}
+
+#container1 h1, #container1 h2, #container1 h3{
+  font-family: impact;
+  font-size: 2em;
+}
+
+.eye {
+  background-image: url('https://cdn1.iconfinder.com/data/icons/face-builder-outlined-pixel-perfect/64/face-builder-02-512.png');
+  background-repeat: no-repeat;
+  background-size: contain;
+}
+
+#box{
+  width: 50%;
+  float: left;
+  height: auto;
+}
+
+#title{
+  font-size: 20px;
+}
+
+#instruct{
+  font-size: 20px;
+}
+
+#clearing{
+  font-size: 20px;
+}
+
+
+#box button{
+  font-size: 24px;
+}
+
+#add input, #add button{
+  width: 50%;
+  float: left;
+  font-size: 24px;
+}
+
+
+/******************************************
+/* MOBILE
+/*******************************************/
+@media only screen and (max-width:627px){
+#container1{
+  width: 100%;
+}
+}
+
+@media only screen and (max-width:395px){
+  #add input, #add button{
+
+    font-size: 15px;
+  }
+
+  #box button{
+    font-size: 15px;
+  }
+
+  #title{
+    font-size: 15px;
+  }
+
+  #instruct{
+    font-size: 15px;
+  }
+
+  #clearing{
+  font-size: 15px;
+  }
+
+  li{
+    font-size: 13px;
+  }
+}
